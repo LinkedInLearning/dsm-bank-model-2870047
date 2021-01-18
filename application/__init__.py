@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
 #load data
-df = pd.read_csv("../bankData/bank.csv", header = None)
+df = pd.read_csv("./bankData/bank.csv", header = None)
 
 #drop campaign related columns
 df.drop(df.iloc[:, 8:16], inplace = True, axis = 1)
