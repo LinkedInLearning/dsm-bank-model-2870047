@@ -33,7 +33,8 @@ X_categoric = df.iloc[:, [1,2,3,4,6,7]].values
 ohe = OneHotEncoder()
 categoric_data = ohe.fit_transform(X_categoric).toarray()
 categoric_df = pd.DataFrame(categoric_data)
-categoric_df.columns = ohe.get_feature_names()
+#categoric_df.columns = ohe.get_feature_names()
+categoric_df.columns = ohe.get_feature_names_out()
 
 #combine numeric and categorix
 X_final = pd.concat([numeric_df, categoric_df], axis = 1)
